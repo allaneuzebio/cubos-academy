@@ -10,6 +10,11 @@
     <h1>
         Aula de Variáveis
     </h1>
+
+    Tipos de Variáveis:
+    number = números
+    string = do tipo texto
+    boolean = verdadeiro ou falso
     <article>
         <p>
             console.log("Mensagem") - usado para imprimir uma mensagem na tela
@@ -43,6 +48,135 @@
             </p>
             <p>const resto = 13 % 5; ele vai guardar o 'resto'da divisão, ele vai fazer a conta e o resultado que sobra dessa divisão vai ser guardado no valor "Resto", é chamado de Módulo.</p>
         </article>
+        <h1>
+            Operadores Condicionais (Comparação)
+        </h1>
+        <p>
+            São operadores de comparação que são utilizados para fazer Condicionais
+            const resultado = 5 > 4;
+            console.log(resultado);
+            let x = 6;
+            let y = 5;
+            const resultado= x > y;
+            console.log(resultado);
+            == --> faz uma pergunta, por exemplo se um númerp é igual ao outro
+            ! -> negação, pergunta se são diferentes
+            === --> pergunta se os elementos são Idênticos, mesmo tipo e valor;
+            !== --> pergunta se os elementos são diferentes
+            pode ser usado também com false e true nos valores
+        </p>
+
+        <h1>
+            Condicionais (if (se)/else (senão))
+        </h1>
+
+        <p>
+            const idade = 30;
+            if (idade >=18) {
+            console.log("Pode seguir, pois é maior de idade");
+            }
+            (vai acontecer se for uma afirmação verdadeira, ou seja, se a mensagem for igual ou maior do que 18)
+            else {
+            console.log("Barrado")
+            (vai acontecer se o resultado da variável anterior for false, ou seja, se a idade for menor do que 18)}
+        </p>
+
+        <h1>
+            Condicionais Encadeadas
+        </h1>
+        
+        <p>
+            // Menores de 18 -> Menor de Idade
+            // Entre 18 e 60 -> Adulto
+            // Maior de 60 anos -> Idoso
+            const idade = 61;
+            if (idade < 18) {
+            console.log("Menor de Idade");
+            }
+            else if (idade <= 60) {
+            console.log("Adulto");
+            }
+            else {
+            console.log("Idoso");
+            }
+        </p>
+
+        <p>Primeiro ele vai verificar a primeira condição, se a idade é menor do que 18. Se o resultado for falso, ele vai verificar a segunda condição, não precisa perguntar se ele for maior que 18 e menor do que 60, por que a operação anterior já afirmou que ele é maior ou menor do que 18 anos.</p>
+
+        <h2>
+            Outro Exemplo
+        </h2>
+
+        <p>
+            // Menores de 18 -> Menor de Idade (meia)
+            // Entre 18 e 60 -> Adulto (meia com carteirinha)
+            // Maior de 60 anos -> Idoso (meia)
+            const idade = 35;
+            const temCarteirinha = true;
+            if (idade < 18) {
+            console.log("Menor paga Meia");
+            }
+            else if (idade <= 60) {
+            if (temCarteirinha === true) {
+                console.log("adulto paga meia");}
+                else {
+            console.log("Adulto Inteira");
+                }
+            }
+            else {
+            console.log("Idoso paga Meia");
+            }
+        </p>
+
+        <h1>
+            Operadores Lógicos
+        </h1>
+        <h2>E / &&</h2>
+
+        <p>
+            // Menores de 18 -> Menor de Idade (meia)
+            // Entre 18 e 60 -> Adulto (meia com carteirinha)
+            // Maior de 60 anos -> Idoso (meia)
+            //Inteira - Adulta e Não tem carteirinha
+            // Meia - O resto
+            //&& = E (and)
+            const idade = 35;
+            const temCarteirinha = true;
+            const Adulto = idade >= 18 && idade <= 60;
+            if (Adulto && temCarteirinha === false) {
+            console.log("Inteira");
+            }
+            else {
+            console.log("MEIA");
+            }
+            Usa o E para simplificar, por exemplo se a pessoa for adulta E não tiver carteirinha, pagará inteira, e qualquer outro resultado pagará MEIA
+            temcCarteirinha === false -> pode ser substituído por > !temCarteirinha
+        </p>
+
+        <h2>OU / ||</h2>
+        || = OU (or)
+
+
+        <p>
+            const idade = 35;
+            const temCarteirinha = true;
+            const Adulto = idade >= 18 && idade <= 60;
+            if (idade < 18 || idade > 60 || Adulto && temCarteirinha) {
+            console.log("MEIA")
+            } else {
+            console.log("INTEIRA")
+            }
+        </p>
+
+        <h1>
+            Arrays / Vetores ou Listas
+        </h1>
+
+        <h2>
+            Conjunto de dados ordenados guardados em uma mesma variável
+        </h2>
+
+        Indice é a posição de um elemento dentro do conjunto de dados, a ordem, e sempre começa do ZERO
 
 
 
