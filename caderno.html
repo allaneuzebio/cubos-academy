@@ -176,7 +176,61 @@
             Conjunto de dados ordenados guardados em uma mesma variável
         </h2>
 
-        Indice é a posição de um elemento dentro do conjunto de dados, a ordem, e sempre começa do ZERO
+        <p>
+            Indice é a posição de um elemento dentro do conjunto de dados, a ordem, e sempre começa do ZERO.
+            Um Array sempre será entre chaves []
+            É possível fazer mais de uma atribuição em CONST
+            -- > const listadenomes = ["José", "Maria", "Pedro", "Joana", "André"]
+            console.log(listadenomes [1]); <--
+            o valor entre [] é o índice que você busca na lista, lembrando que começa do 0, ali vai do 0 até o 4.
+            Pode também incluir variáveis, como por exemplo
+            listadenomes[5] = "Johnny";
+            listadenome[1] = "Ana"  --> para substituir um nome em uma lista
+        </p>
+
+        <h3>
+            Color itens diretamente no final de uma lista
+        </h3>
+
+        <p>
+            const notas = ["1", "2", "3"];
+            notas.push(4);
+            notas.push(5); --> para adicionar um valor
+            notas.pop(); --->> Para retirar o último valor
+            console.log(notas);
+        </p>
+
+        <h1>
+            Estruturas de Repetição / For / OF
+        </h1>
+
+        <p>
+            const notas = [10,9,7,8,5];
+            // quero calcular a média aritmética
+            let soma = 0;
+            for (let item OF notas){
+            soma = soma + item; } ---> ele vai somar repetidamente os valores de ITEM dentro da variável soma
+            
+            console.log(soma); --> vai dar o resultado dentro da variável soma
+            console.log(soma/notas.length);  ---> notas.length vai atribuir toda a LARGURA da variável, ou seja, vai dividir pelo número de valores, assim sempre que você adicionar um valor dentro da variável notas, o valor da operação da soma vai se atualizar automaticamente.
+        </p>
+
+        <h3>
+            Outro Exemplo
+        </h3>
+
+        <p>
+            const notas = [10,9,7,8,5,6,10,5];
+            //contar quantas notas abaixo de 7
+            let notasVermelhas = 0;
+            for (let item of notas) {
+            if (item < 7) {
+                notasVermelhas = notasVermelhas += 1
+            }
+            }
+            console.log(notasVermelhas);
+        </p>
+
 
 
 
